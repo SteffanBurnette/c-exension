@@ -1,0 +1,23 @@
+#input-el{
+     width: 100%;
+     border-color: green;
+     border-width: thin;
+     box-sizing: border-box;
+}
+
+#input-btn{
+    margin-top: 7px;
+    color:aliceblue;
+    background-color: green;
+    border:none;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
+}
