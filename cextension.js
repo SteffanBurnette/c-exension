@@ -18,7 +18,17 @@ btn.addEventListener("click", function() {
     
 })
 
+/*
 for(let i = 0; i < myLeads.length; i++){
         console.log(myLeads[i])
-        listEl.textContent += myLeads[i] + "/n"
+        listEl.innerHTML += "<li>" + myLeads[i] + "</li> "
     }
+        */
+
+for(let i = 0; i < myLeads.length; i++){
+    
+    //Creates a html element 
+    const li = document.createElement("li")
+    li.textContent = myLeads[i]
+    listEl.append(li)
+}
