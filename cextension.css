@@ -25,3 +25,17 @@
 #list-el{
     color:black;
 }
+
+/*Targets only anchor tags that lives inside of list item elements*/
+li a {
+    color: #5f9341;
+}
+
+ul{
+    margin-top: 10px;
+    list-style: none; /*Removes the bullet points*/
+    padding-left: 0;
+}
+li{
+    margin-top: 5px;
+}
