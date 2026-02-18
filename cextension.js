@@ -2,6 +2,7 @@ const btn = document.getElementById("input-btn")
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const listEl = document.getElementById("list-el")
+const delBtn = document.getElementById("delete-btn")
 
 /**
  localStorage.setItem(key, value) -> Both key and value needs to be strings
@@ -36,6 +37,12 @@ btn.addEventListener("click", function() {
     
 
     
+})
+
+delBtn.addEventListener("click", function(){
+    console.log("Delete button clicked")
+    localStorage.clear()
+    renderLeads()
 })
 
 function renderLeads(){

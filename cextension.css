@@ -40,3 +40,10 @@ ul{
 li{
     margin-top: 5px;
 }
+
+#delete-btn{
+    color: green;
+    border-color: green;
+    padding: 3px 5px;
+    background-color: white;
+}
