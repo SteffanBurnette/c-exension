@@ -33,7 +33,7 @@ btn.addEventListener("click", function() {
     //Saving the array to local storage after it has been pushed
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     renderLeads()
-    inputEl.value = "" //Clears the input field once its done
+    inputEl.value = "" //Clears the input field once its done.
     
 
     
