@@ -3,6 +3,7 @@ let myLeads = []
 const inputEl = document.getElementById("input-el")
 const listEl = document.getElementById("list-el")
 const delBtn = document.getElementById("delete-btn")
+const tabBtn = document.getElementById("save-tab-btn")
 
 /**
  localStorage.setItem(key, value) -> Both key and value needs to be strings
@@ -20,7 +21,7 @@ let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
 if (leadsFromLocalStorage){
     myLeads = leadsFromLocalStorage
-    renderLeads()
+    render(myLeads)
 }
 
 //Using an event listener to trigger  a function when the button is clicked
@@ -32,7 +33,7 @@ btn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     //Saving the array to local storage after it has been pushed
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    renderLeads()
+    render()
     inputEl.value = "" //Clears the input field once its done.
     
 
@@ -45,17 +46,21 @@ delBtn.addEventListener("dblclick", function(){
     console.log("Delete button clicked")
     myLeads = []
     localStorage.clear()
-    renderLeads()
+    render()
 })
 
-function renderLeads(){
+tabBtn.addEventListener("click", function(){
+    console.log("Tab saved")
+})
+
+function render(leads){
 
     let listItems = ""
-    for (let i = 0; i < myLeads.length; i++){
+    for (let i = 0; i < leads.length; i++){
         listItems += `
            <li>
-               <a target = "_blank" href = "${myLeads[i]}">
-               ${myLeads[i]}
+               <a target = "_blank" href = "${leads[i]}">
+               ${leads[i]}
                </a>
            </li>
         `
