@@ -41,7 +41,7 @@ btn.addEventListener("click", function() {
 })
 
 //Clears the local storage, myLeads array and calls the renderLeads method
-//Will trigger when the user performs a double clickk
+//Will trigger when the user performs a double click
 delBtn.addEventListener("dblclick", function(){
     console.log("Delete button clicked")
     myLeads = []
