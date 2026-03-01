@@ -5,5 +5,8 @@
     "action": {
         "default_popup": "cextension.html",
         "default_icon": "dollar.png"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }

@@ -46,11 +46,20 @@ delBtn.addEventListener("dblclick", function(){
     console.log("Delete button clicked")
     myLeads = []
     localStorage.clear()
-    render()
+    render(myLeads)
 })
 
 tabBtn.addEventListener("click", function(){
     console.log("Tab saved")
+
+    //Grabbing the url of the current tab
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        render(myLeads)
+    })
+
+ 
 })
 
 function render(leads){
